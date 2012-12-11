@@ -1,0 +1,37 @@
+# This code came out of an assignment in which the professor gave us a .txt file 'paper' and we had to practice
+# writing functions in R. The last question was "surprise me" and so that we did. The function accepts a few parameters
+# feel free to add what ever you like, or change the fortunes. Could make this more complex in the future by adding
+# multiple levels of choosing, etc. 
+
+
+
+
+surpriseMe <- function(paper, faveNumber, numChildren, faveColor, birthMonth){
+magicNumber <- (length(paper) + faveNumber + numChildren + nchar(faveColor) + nchar(birthMonth))
+catch < -magicNumber %% 8
+if(catch == 0){
+  fortune <- "You would do well in the field of computer technology."
+}
+if(catch == 1){
+  fortune <- "I wish you hundreds of fat children."
+}
+if(catch == 2){
+	fortune <- "You are almost at the top. That means you have further to fall."
+}
+if(catch == 3){
+	fortune <- "You are not illiterate"
+}
+if(catch == 4){
+	fortune <- "Someone has Googled you recently."
+}
+if(catch == 5){
+	fortune <- "You are the pig whisperer."
+}
+if(catch == 6){
+	fortune <- "Ignore previous fortune."
+}
+if(catch == 7){
+	fortune <- "Your students secretly agree that your head is too small for your body."
+}
+fortune
+}
